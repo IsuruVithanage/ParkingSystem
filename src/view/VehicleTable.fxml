@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="contextvtm" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: linear-gradient(#deae36, #e9c979);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.VehicleTableController">
+   <children>
+      <Label layoutX="82.0" layoutY="7.0" text="ALL VEHICLES" textFill="WHITE">
+         <font>
+            <Font name="Century Schoolbook Bold" size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="82.0" layoutY="50.0" prefHeight="19.0" prefWidth="352.0" text="SAMAN RICE COMPANY PARRKING SYSTEM" textFill="WHITE">
+         <font>
+            <Font name="Century Schoolbook" size="15.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="61.0" fitWidth="72.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/riceLogo.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="21.0" layoutY="89.0" prefHeight="482.0" prefWidth="755.0" style="-fx-background-color: white; -fx-background-radius: 1.5em;">
+         <children>
+            <TableView fx:id="allVehicletbl" layoutX="29.0" layoutY="31.0" prefHeight="405.0" prefWidth="698.0" style="-fx-background-color: #fdf1dc;">
+              <columns>
+                <TableColumn fx:id="colVehicleNumber" prefWidth="200.0" text="Vehicle Number" />
+                <TableColumn fx:id="colVehicleType" prefWidth="103.0" text="Vehicle Type" />
+                  <TableColumn fx:id="colMaxWeight" prefWidth="160.0" text="Maximum Weight (kg)" />
+                  <TableColumn fx:id="colNoPassenger" prefWidth="148.0" text="Number of Passengers" />
+                  <TableColumn fx:id="colDelete" prefWidth="85.0" text="Delete" />
+              </columns>
+            </TableView>
+            <JFXButton buttonType="RAISED" layoutX="26.0" layoutY="446.0" onAction="#back" prefHeight="27.0" prefWidth="72.0" style="-fx-background-color: #fdd471; -fx-background-radius: 0.7em;" text="Back">
+               <font>
+                  <Font name="Calibri Bold" size="15.0" />
+               </font>
+            </JFXButton>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

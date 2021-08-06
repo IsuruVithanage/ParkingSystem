@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="context" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: linear-gradient(#deae36, #e9c979);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddVehicleController">
+   <children>
+      <Label layoutX="87.0" layoutY="18.0" text="ADD VEHICLE" textFill="WHITE">
+         <font>
+            <Font name="Century Schoolbook Bold" size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="87.0" layoutY="60.0" prefHeight="19.0" prefWidth="348.0" text="SAMAN RICE COMPANY PARRKING SYSTEM" textFill="WHITE">
+         <font>
+            <Font name="Century Schoolbook" size="15.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="73.0" fitWidth="69.0" layoutX="8.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/riceLogo.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="20.0" layoutY="132.0" prefHeight="398.0" prefWidth="761.0" style="-fx-background-color: white; -fx-background-radius: 1.5em;">
+         <children>
+            <AnchorPane layoutX="32.0" layoutY="57.0" prefHeight="63.0" prefWidth="340.0" style="-fx-background-color: #fdf1dc; -fx-background-radius: 0.7em;">
+               <children>
+                  <Label layoutX="14.0" layoutY="19.0" text="Vehicle Number">
+                     <font>
+                        <Font name="Calibri Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="vehicleNumber" layoutX="196.0" layoutY="15.0" prefHeight="34.0" prefWidth="130.0" promptText="Number" style="-fx-background-color: white;">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="32.0" layoutY="165.0" prefHeight="63.0" prefWidth="340.0" style="-fx-background-color: #fdf1dc; -fx-background-radius: 0.7em;">
+               <children>
+                  <Label layoutX="14.0" layoutY="19.0" text="Maximum Weight">
+                     <font>
+                        <Font name="Calibri Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="weight" layoutX="196.0" layoutY="15.0" prefHeight="34.0" prefWidth="130.0" promptText="Weight" style="-fx-background-color: white;">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="397.0" layoutY="57.0" prefHeight="63.0" prefWidth="340.0" style="-fx-background-color: #fdf1dc; -fx-background-radius: 0.7em;">
+               <children>
+                  <Label layoutX="14.0" layoutY="19.0" text="No of Passengers">
+                     <font>
+                        <Font name="Calibri Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="passengers" layoutX="196.0" layoutY="15.0" prefHeight="34.0" prefWidth="130.0" promptText="Number" style="-fx-background-color: white;">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="397.0" layoutY="168.0" prefHeight="63.0" prefWidth="340.0" style="-fx-background-color: #fdf1dc; -fx-background-radius: 1em;">
+               <children>
+                  <JFXComboBox fx:id="cmbvehicle" focusColor="BLACK" layoutX="213.0" layoutY="19.0" prefHeight="25.0" prefWidth="101.0" promptText="Vehicle" />
+                  <Label layoutX="37.0" layoutY="19.0" text="Select Vehicle">
+                     <font>
+                        <Font name="Calibri Bold" size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <JFXButton buttonType="RAISED" layoutX="518.0" layoutY="295.0" onAction="#addNewVehicle" prefHeight="63.0" prefWidth="169.0" style="-fx-background-color: #fdd471; -fx-background-radius: 1em;" text="ADD VEHICLE">
+               <font>
+                  <Font name="Calibri Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="104.0" layoutY="298.0" onAction="#clearData" prefHeight="63.0" prefWidth="169.0" style="-fx-background-color: #fdd471; -fx-background-radius: 1em;" text="CLEAR">
+               <font>
+                  <Font name="Calibri Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="lberror" layoutX="283.0" layoutY="260.0" prefHeight="22.0" prefWidth="218.0" textFill="RED">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <JFXButton buttonType="RAISED" layoutX="20.0" layoutY="544.0" onAction="#back" prefHeight="34.0" prefWidth="101.0" style="-fx-background-color: #fdd471; -fx-background-radius: 0.7em;" text="Back">
+         <font>
+            <Font name="Calibri Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane layoutX="563.0" layoutY="33.0" prefHeight="40.0" prefWidth="218.0" style="-fx-background-color: #fdf1dc; -fx-background-radius: 0.7EM;">
+         <children>
+            <FontAwesomeIconView glyphName="USER" layoutX="14.0" layoutY="28.0" size="24" />
+            <Label fx:id="accountNameadd" layoutX="51.0" layoutY="12.0" prefHeight="18.0" prefWidth="148.0" text="MR ADMIN NAME">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

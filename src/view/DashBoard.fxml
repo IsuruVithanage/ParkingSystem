@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="contexDash" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: linear-gradient(#deae36, #e9c979);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardController">
+   <children>
+      <Label layoutX="92.0" layoutY="14.0" text="DASHBOARD" textFill="WHITE">
+         <font>
+            <Font name="Century Schoolbook Bold" size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="92.0" layoutY="58.0" prefHeight="19.0" prefWidth="344.0" text="SAMAN RICE COMPANY PARRKING SYSTEM" textFill="WHITE">
+         <font>
+            <Font name="Century Schoolbook" size="15.0" />
+         </font></Label>
+      <ImageView fitHeight="70.0" fitWidth="83.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/riceLogo.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="19.0" layoutY="102.0" prefHeight="466.0" prefWidth="764.0" style="-fx-background-color: white; -fx-background-radius: 2.3em;">
+         <children>
+            <AnchorPane layoutX="21.0" layoutY="44.0" prefHeight="43.0" prefWidth="299.0" style="-fx-background-color: #fdf1dc; -fx-background-radius: 1em;" />
+            <JFXComboBox fx:id="cmbVehicle" focusColor="#deae36" layoutX="182.0" layoutY="52.0" prefHeight="25.0" prefWidth="115.0" promptText="Vehicle" unFocusColor="#deae36" />
+            <Label layoutX="36.0" layoutY="54.0" text="Select Vehicle">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="23.0" layoutY="106.0" prefHeight="43.0" prefWidth="299.0" style="-fx-background-color: #fdf1dc; -fx-background-radius: 1em;">
+               <children>
+                  <Label fx:id="lbtype" layoutX="166.0" layoutY="13.0" text="Type" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="38.0" layoutY="116.0" text="Vehicle Type">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="23.0" layoutY="167.0" prefHeight="43.0" prefWidth="299.0" style="-fx-background-color: #fdf1dc; -fx-background-radius: 1em;" />
+            <JFXComboBox fx:id="cmbDrivers" focusColor="#deae36" layoutX="184.0" layoutY="175.0" prefHeight="25.0" prefWidth="115.0" promptText="Name" unFocusColor="#deae36" />
+            <Label layoutX="38.0" layoutY="177.0" text="Driver">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="23.0" layoutY="237.0" prefHeight="185.0" prefWidth="299.0" style="-fx-background-color: #fdf1dc; -fx-background-radius: 2.3em;">
+               <children>
+                  <Label layoutX="42.0" layoutY="20.0" text="Your Parking Slot Number">
+                     <font>
+                        <Font name="Calibri Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane layoutX="81.0" layoutY="50.0" prefHeight="104.0" prefWidth="125.0" style="-fx-background-color: white; -fx-background-radius: 1.5em;" />
+                  <Label fx:id="slotlb" layoutX="105.0" layoutY="62.0" text="13">
+                     <font>
+                        <Font name="Arial Bold" size="68.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <JFXButton fx:id="parking" buttonType="RAISED" layoutX="447.0" layoutY="241.0" onAction="#parkVehicle" prefHeight="43.0" prefWidth="233.0" style="-fx-background-color: #fdd471; -fx-background-radius: 1em;" text="Park Vehicle">
+               <font>
+                  <Font name="Calibri Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="delivery" buttonType="RAISED" layoutX="447.0" layoutY="300.0" onAction="#deliver" prefHeight="43.0" prefWidth="233.0" style="-fx-background-color: #fdd471; -fx-background-radius: 1em;" text="On Delivery Shift">
+               <font>
+                  <Font name="Calibri Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="447.0" layoutY="355.0" onAction="#openLoginWindow" prefHeight="43.0" prefWidth="233.0" style="-fx-background-color: #ffc233; -fx-background-radius: 1em;" text="Management Log in">
+               <font>
+                  <Font name="Calibri Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <AnchorPane layoutX="459.0" layoutY="113.0" prefHeight="43.0" prefWidth="210.0" style="-fx-background-color: #fdf1dc; -fx-background-radius: 1em;">
+               <children>
+                  <Label fx:id="lbdate" layoutX="89.0" layoutY="6.0" prefHeight="32.0" prefWidth="104.0" text="2021/07/17">
+                     <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="11.0" text="Date">
+                     <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <JFXTextField fx:id="time" focusColor="WHITE" layoutX="462.0" layoutY="45.0" prefHeight="43.0" prefWidth="204.0" style="-fx-background-color: #fdf1dc; -fx-background-radius: 1.3em;" text="   00:00:00 AM" unFocusColor="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="30.0" />
+               </font>
+            </JFXTextField>
+            <Label fx:id="lbError" layoutX="499.0" layoutY="202.0" prefHeight="17.0" prefWidth="134.0" textFill="RED">
+               <font>
+                  <Font name="Calibri Bold" size="12.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
